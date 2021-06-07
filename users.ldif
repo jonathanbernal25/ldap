@@ -92,6 +92,7 @@ dn: uid=test,ou=users,dc=tyk,dc=com
 objectClass: top
 objectClass: person
 objectClass: inetOrgPerson
+objectClass: simulatedMicrosoftSecurityPrincipal
 objectCategory: User
 cn: admin
 sn: lastname
