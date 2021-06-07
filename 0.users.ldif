@@ -1,10 +1,8 @@
-#########################################################################
+#########################################################
 # MICROSOFT SCHEMA for sAMAccountName and memberOf
 # these two attributes are not defined in Apache Directory Server
-#########################################################################
-# LDIF stands for "LDAP Data Interchange Format"
-# LDIF is a schema extension file format for Microsoft Active Directory
-#########################################################################
+#########################################################
+
 dn: cn=microsoft, ou=schema
 objectclass: metaSchema
 objectclass: top
@@ -65,62 +63,36 @@ m-must: objectCategory
 ############
 # Domain
 ############
-dn: dc=tyk,dc=io
-dc: tyk
+dn: dc=wimpi,dc=net
+dc: wimpi
 objectClass: top
 objectClass: domain
 
-dn: ou=users,dc=tyk,dc=io
+dn: ou=users,dc=wimpi,dc=net
 objectClass: organizationalUnit
 objectClass: top
 ou: users
 
-dn: uid=test,ou=users,dc=tyk,dc=io
+dn: uid=test,ou=users,dc=wimpi,dc=net
 objectClass: top
 objectClass: person
 objectClass: inetOrgPerson
 objectClass: simulatedMicrosoftSecurityPrincipal
 objectCategory: User
-cn: Common Name
-sn: lastname
+cn: Test User
+sn: test
 uid: test
 sAMAccountName: test
 userPassword: secret
 memberOf: admin
 
-dn: uid=jonathan,ou=users,dc=tyk,dc=io
-objectClass: top
-objectClass: person
-objectClass: inetOrgPerson
-objectClass: simulatedMicrosoftSecurityPrincipal
-objectCategory: User
-cn: admin
-sn: lastname
-uid: jonathan
-sAMAccountName: random
-userPassword: testing
-memberOf: admin
-
-dn: uid=sally,ou=users,dc=tyk,dc=io
-objectClass: top
-objectClass: person
-objectClass: inetOrgPerson
-objectClass: simulatedMicrosoftSecurityPrincipal
-objectCategory: User
-cn: intern
-sn: lastname
-uid: sally
-sAMAccountName: random
-userPassword: testing
-memberOf: admin
-
-dn: ou=roles,dc=tyk,dc=io
+dn: ou=roles,dc=wimpi,dc=net
 objectclass: top
 objectclass: organizationalUnit
 ou: roles
 
-dn: cn=admin,ou=roles,dc=tyk,dc=io
+dn: cn=admin,ou=roles,dc=wimpi,dc=net
 objectClass: top
 objectClass: groupOfNames
 cn: admin
-member: uid=test,ou=users,dc=tyk,dc=io
+member: uid=test,ou=users,dc=wimpi,dc=net
