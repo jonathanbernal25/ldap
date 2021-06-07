@@ -1,7 +1,6 @@
-# Simple LDAP server simulating AD for integration testing
+# Simple LDAP server simulating Active Directory
 
-This is a simple LDAP server that tries to simulate an AD using 
-Apache Directory Server.
+This is a simple LDAP server that tries to simulates an Active Directory using Apache Directory Server.
 
 * Should work for activedirectory.js
 * Is based on https://github.com/kwart/ldap-server/ and 
