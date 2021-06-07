@@ -88,7 +88,7 @@ sAMAccountName: test
 userPassword: secret
 memberOf: admin
 
-dn: uid=test,ou=users,dc=tyk,dc=com
+dn: uid=jon_test,ou=users,dc=tyk,dc=com
 objectClass: top
 objectClass: person
 objectClass: inetOrgPerson
